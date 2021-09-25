@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#top, #bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+#top-left, #bottom-left {
+  background-color: rgb(245, 242, 234);
+  width: 30%;
+}
+
+#top-right, #bottom-right {
+  background-color: white;
+  width: 70%;
+}
+
+#top-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top-left > img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+
+#top-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color:rgb(56, 56, 56);
+  font-size: 40px;
+  padding-left: 50px;
+}
+
+#top-right > ul {
+  list-style-type: none;
+  padding-left: 50px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+#bottom-left, #bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+section {
+  margin: 10px 0;
+}
+
+#bottom-left > article {
+  width: 80%;
+}
+
+article > h2 {
+  text-transform: uppercase;
+  color: rgb(245, 242, 234);
+  letter-spacing: 10px;
+  background-color: rgb(105, 105, 103);
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+#skills {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+p, ul, li, a {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+h3 {
+  color:rgb(56, 56, 56);
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+#top-right > h2 {
+  letter-spacing: 7px;
+  color:rgb(56, 56, 56);
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 50px;
+}
+
+#bottom-right > article > section {
+  display: flex;
+  flex-direction: column;
+}
+
+#bottom-right > article > section > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  #top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #bottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #top-left, #bottom-left, #top-right, #bottom-right {
+    width: 100%;
+    margin: 0;
+  }
+
+  #bottom-left > article {
+    width: 90%;
+  }
+
+  #top-right, #bottom-right {
+    background-color: rgb(245, 242, 234);
+  }
+
+  #top-right {
+    padding-top: 20px;
+  }
+}
+
+
+
