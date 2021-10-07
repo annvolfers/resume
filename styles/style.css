@@ -1,48 +1,50 @@
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgb(211, 202, 186);
 }
 
-#top, #bottom {
+.top, .bottom {
   display: flex;
   flex-direction: row;
 }
 
-#top-left, #bottom-left {
+.top-left, .bottom-left {
   background-color: rgb(245, 242, 234);
-  width: 30%;
+  width: 35%;
 }
 
-#top-right, #bottom-right {
+.top-right, .bottom-right {
   background-color: white;
-  width: 70%;
+  width: 65%;
 }
 
-#top-left {
+.top-left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#top-left > img {
+.image {
   width: 230px;
   height: 230px;
   border-radius: 50%;
 }
 
-#top-right {
+.top-right {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  padding-top: 40px;
 }
 
-h1 {
+.title {
   text-transform: uppercase;
   letter-spacing: 8px;
   color:rgb(56, 56, 56);
@@ -50,39 +52,64 @@ h1 {
   padding-left: 50px;
 }
 
-#top-right > ul {
+.profession {
+  letter-spacing: 7px;
+  color:rgb(56, 56, 56);
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 50px;
+}
+
+.contacts {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 10px 0;
+  line-height: 1.5;
   list-style-type: none;
   padding-left: 50px;
 }
 
-.icon {
+.item {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.contacts__icon {
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
 
-#bottom-left, #bottom-right {
+.contacts__link {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.bottom-left, .bottom-right {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-article {
+.block {
   width: 90%;
   display: flex;
   flex-direction: column;
   margin: 20px 0;
 }
 
-section {
-  margin: 10px 0;
-}
-
-#bottom-left > article {
+.bottom-left .block {
   width: 80%;
 }
 
-article > h2 {
+.block__title {
   text-transform: uppercase;
   color: rgb(245, 242, 234);
   letter-spacing: 10px;
@@ -92,14 +119,7 @@ article > h2 {
   margin-bottom: 10px;
 }
 
-#skills {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-around;
-  padding-left: 0;
-}
-
-p, ul, li, a {
+.text {
   color: rgb(105, 105, 103);
   letter-spacing: 1px;
   word-spacing: 3px;
@@ -107,58 +127,84 @@ p, ul, li, a {
   line-height: 1.5;
 }
 
-h3 {
+.education {
+  margin: 10px 0;
+}
+
+.degree {
   color:rgb(56, 56, 56);
   text-transform: uppercase;
   margin: 10px 0;
 }
 
-#top-right > h2 {
-  letter-spacing: 7px;
-  color:rgb(56, 56, 56);
-  font-size: 20px;
-  font-weight: 500;
-  padding-left: 50px;
-}
-
-#bottom-right > article > section {
+.job {
   display: flex;
   flex-direction: column;
 }
 
-#bottom-right > article > section > div {
+.job__title {
   display: flex;
   justify-content: space-between;
+  color:rgb(56, 56, 56);
+  text-transform: uppercase;
+  margin: 10px 0;
 }
 
-@media (max-width: 1000px) {
-  #top {
-    display: flex;
+.responsibilities {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.skills {
+  color: rgb(105, 105, 103);
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  line-height: 1.5;
+  columns: 2;
+  margin: 10px auto;
+  padding-left: 0;
+}
+
+.skills .item {
+  margin: 10px 50px;
+}
+
+.skills .item:first-child {
+  margin-top: 0px;
+}
+
+@media (max-width: 900px) {
+  .top {
     flex-direction: column;
   }
 
-  #bottom {
-    display: flex;
+  .bottom {
     flex-direction: column-reverse;
   }
 
-  #top-left, #bottom-left, #top-right, #bottom-right {
+  .top-left {
     width: 100%;
-    margin: 0;
+    padding-top: 40px;
   }
 
-  #bottom-left > article {
+  .bottom-left {
+    width: 100%;
+  }
+
+  .bottom-left .block {
     width: 90%;
   }
-
-  #top-right, #bottom-right {
+  
+  .top-right {
+    width: 100%;
     background-color: rgb(245, 242, 234);
   }
-
-  #top-right {
-    padding-top: 20px;
+  
+  .bottom-right {
+    width: 100%;
+    background-color: rgb(245, 242, 234);
   }
 }
-
-
-
