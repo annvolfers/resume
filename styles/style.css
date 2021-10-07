@@ -208,3 +208,13 @@ body {
     background-color: rgb(245, 242, 234);
   }
 }
+
+@media (max-width: 450px) {
+  .skills {
+    columns: 1;
+  }
+  
+  .job__title {
+    flex-direction: column;
+  }
+}
